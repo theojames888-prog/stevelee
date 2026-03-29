@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — CutPro Video Editor</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --muted: #6b6760;
+    --rule: #e8e4dc;
+    --bg: #faf9f6;
+    --accent: #1a1612;
+    --highlight: #c8b89a;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding: 2.5rem 0 2rem;
+    text-align: center;
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .app-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+  }
+  .app-icon {
+    width: 40px; height: 40px;
+    background: var(--ink);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 18px;
+  }
+  .app-name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+  .date-tag {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  main { padding: 4rem 0 6rem; }
+  .toc {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    margin-bottom: 3.5rem;
+  }
+  .toc-title {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 2rem;
+  }
+  .toc li { counter-increment: toc; }
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-size: 0.7rem;
+    color: var(--highlight);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .toc a:hover { color: var(--muted); }
+  section {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--highlight);
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+  }
+  p { margin-bottom: 1rem; font-size: 0.95rem; color: #2a2825; }
+  p:last-child { margin-bottom: 0; }
+  ul {
+    margin: 0.8rem 0 1rem 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul li {
+    font-size: 0.95rem;
+    color: #2a2825;
+    padding: 0.3rem 0 0.3rem 1.4rem;
+    position: relative;
+  }
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--highlight);
+  }
+  .callout {
+    background: #fff;
+    border-left: 3px solid var(--ink);
+    border-radius: 0 8px 8px 0;
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.92rem;
+  }
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2.5rem 0;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--ink); }
+  .footer-copy { font-size: 0.78rem; color: var(--muted); }
+  a { color: var(--ink); }
+  @media (max-width: 600px) {
+    .toc ol { grid-template-columns: 1fr; }
+    header { padding: 1.5rem 0 1rem; position: static; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrapper">
+    <div class="app-badge">
+      <div class="app-icon">▶</div>
+      <span class="app-name">CutPro Video Editor</span>
+    </div>
+    <h1>Terms of Service</h1>
+    <span class="date-tag">Effective: January 1, 2025 &nbsp;·&nbsp; Last updated: March 29, 2025</span>
+  </div>
+</header>
+
+<main>
+  <div class="wrapper">
+
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#license">License to Use</a></li>
+        <li><a href="#restrictions">Restrictions</a></li>
+        <li><a href="#content">Your Content</a></li>
+        <li><a href="#purchases">Purchases &amp; Refunds</a></li>
+        <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#governing">Governing Law</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </div>
+
+    <div class="callout">
+      <strong>Plain-language summary:</strong> By using CutPro, you agree to these terms. You keep ownership of all your video content. We grant you a personal license to use the app. Don't reverse-engineer or redistribute the app.
+    </div>
+
+    <section id="acceptance">
+      <div class="section-num">01</div>
+      <h2>Acceptance of Terms</h2>
+      <p>By downloading, installing, or using CutPro Video Editor ("the App", Bundle ID: com.appchunks.VideoEditor), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+      <p>These Terms constitute a legally binding agreement between you and AppChunks ("we", "us", "our"). We reserve the right to update these Terms at any time, with notice provided by updating the "Last updated" date above.</p>
+    </section>
+
+    <section id="license">
+      <div class="section-num">02</div>
+      <h2>License to Use</h2>
+      <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+      <ul>
+        <li>Download and install the App on Apple devices that you own or control</li>
+        <li>Use the App for your personal or commercial video editing projects</li>
+        <li>Access updates and new features as they are released</li>
+      </ul>
+      <p>This license is granted solely for use in accordance with these Terms and Apple's App Store Terms of Service. All rights not expressly granted are reserved by AppChunks.</p>
+    </section>
+
+    <section id="restrictions">
+      <div class="section-num">03</div>
+      <h2>Restrictions</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Copy, modify, distribute, sell, or lease any part of the App</li>
+        <li>Reverse-engineer, decompile, or disassemble the App's source code</li>
+        <li>Use the App to create competing products or services</li>
+        <li>Remove or alter any proprietary notices, labels, or marks on the App</li>
+        <li>Use the App to process content that infringes third-party intellectual property rights</li>
+        <li>Circumvent any technical measures designed to protect the App</li>
+      </ul>
+    </section>
+
+    <section id="content">
+      <div class="section-num">04</div>
+      <h2>Your Content</h2>
+      <p>You retain full ownership of all video files, audio, images, and other media you import into the App ("Your Content"). We do not claim any ownership rights over Your Content.</p>
+      <p>By using the App, you represent and warrant that:</p>
+      <ul>
+        <li>You have the right to use, edit, and export all content you import</li>
+        <li>Your use of the App does not violate any applicable law or third-party rights</li>
+        <li>You are solely responsible for the content you create and distribute using the App</li>
+      </ul>
+      <p>Since all processing occurs on-device, we do not have access to Your Content at any time.</p>
+    </section>
+
+    <section id="purchases">
+      <div class="section-num">05</div>
+      <h2>Purchases &amp; Refunds</h2>
+      <p>CutPro is available as a one-time purchase through the Apple App Store. All transactions are processed by Apple and are subject to Apple's payment terms and refund policies.</p>
+      <p>For refund requests, please contact Apple directly through your App Store purchase history. We do not process refunds directly but will cooperate with Apple's refund process where required.</p>
+      <p>In-app purchases, if any, are also processed through Apple and are subject to the same terms.</p>
+    </section>
+
+    <section id="disclaimer">
+      <div class="section-num">06</div>
+      <h2>Disclaimer of Warranties</h2>
+      <p>The App is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      <p>We do not warrant that:</p>
+      <ul>
+        <li>The App will be uninterrupted, error-free, or secure</li>
+        <li>Any defects or errors will be corrected</li>
+        <li>The App will meet your specific requirements</li>
+      </ul>
+      <p>You assume all risk associated with the use of the App and any content you process with it.</p>
+    </section>
+
+    <section id="liability">
+      <div class="section-num">07</div>
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, AppChunks shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, goodwill, or other intangible losses, resulting from:</p>
+      <ul>
+        <li>Your access to or use of (or inability to access or use) the App</li>
+        <li>Any conduct or content of third parties</li>
+        <li>Unauthorised access, use, or alteration of your content</li>
+      </ul>
+      <p>In no event shall our total liability to you exceed the amount you paid for the App in the twelve months preceding the claim.</p>
+    </section>
+
+    <section id="termination">
+      <div class="section-num">08</div>
+      <h2>Termination</h2>
+      <p>These Terms are effective until terminated. Your rights under these Terms will terminate automatically without notice if you fail to comply with any provision herein.</p>
+      <p>Upon termination, you must cease all use of the App and delete all copies in your possession. Sections covering Disclaimer of Warranties, Limitation of Liability, and Governing Law shall survive termination.</p>
+    </section>
+
+    <section id="governing">
+      <div class="section-num">09</div>
+      <h2>Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions.</p>
+      <p>Any disputes arising under these Terms shall be resolved exclusively in the state or federal courts located in Los Angeles County, California.</p>
+    </section>
+
+    <section id="contact">
+      <div class="section-num">10</div>
+      <h2>Contact</h2>
+      <p>For any questions regarding these Terms of Service:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:theo.james888@icloud.com">theo.james888@icloud.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+12135792635">+1 (213) 579-2635</a></li>
+        <li><strong>App:</strong> CutPro Video Editor — com.appchunks.VideoEditor</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrapper">
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 AppChunks. All rights reserved. &nbsp;·&nbsp; com.appchunks.VideoEditor</p>
+  </div>
+</footer>
+
+</body>
+</html>
